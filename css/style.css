@@ -1,10 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,900&display=swap');
+
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+}
+
+html {
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+	background: #314755;
+	/* fallback for old browsers */
+	background: -webkit-linear-gradient(left, #26a0da, #314755);
+	background: -o-linear-gradient(left, #26a0da, #314755);
+	background: linear-gradient(to right, #26a0da, #314755);
+	/* Chrome 10-25, Safari 5.1-6 */
+	/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+	background-color: #2980b9;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	font-weight: 300;
+	font-size: 24px;
+	letter-spacing: 1px;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	color: #555;
+}
+
+li:hover span {
+	width: 40px;
+	opacity: 1.0
+}
+
+li:nth-child(2n) {
+	background-color: #f7f7f7;
+}
+
 #container {
-	border: 2px solid gray;
+	background-color: #f7f7f7;
 	width: 400px;
-	margin: 0 auto;
+	margin: 100px auto;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, .3);
+}
+
+.fa-pencil-alt {
+	float: right;
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: #fff;
+	width: 0;
+	display: inline-block;
+	transition: .3s linear;
+	opacity: 0;
+}
+
+input[type='text'] {
+	background-color: #f7f7f7;
+	font-size: 15px;
+	padding: 13px 13px 13px 20px;
+	width: 100%;
+	color: #2980b9;
+	border: none;
+
+}
+
+input[type='text']:focus {
+	outline: 0
 }
 
 .done {
-	color: gray;
-	text-decoration: line-through;
+	color: green;
+/*	text-decoration: line-through;*/
+	font-weight: bold;
+}
+
+.done:after {
+	font-family: "Font Awesome 5 Free";
+	content: "\f058";
+	margin-left: 5px;
 }
