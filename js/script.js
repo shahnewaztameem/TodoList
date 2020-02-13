@@ -6,7 +6,7 @@ $("ul").on("click", "li", function(){
 	$(this).toggleClass("done");
 });
 
-//click on X to delete To-do item
+//click on X to delete item
 $("ul").on("click", "span", function(event){
 	$(this).parent().fadeOut(580,function(){
 		$(this).remove();
@@ -15,15 +15,17 @@ $("ul").on("click", "span", function(event){
 	event.stopPropagation();
 });
 
-// add items on keypress
 
+// add items on keypress
 $("input[type='text']").keypress(function(event){
 	if(event.which === 13) {
 		var item = $(this).val();
-//		console.log(item);
+		//console.log(item);
 		$(this).val("");
-		$("ul").append("<li><span>X</span> " + item + "</li>");
+		if(item !== ''){
+			$("ul").append("<li style='display:none'><span>X</span> " + item + "</li>").find("li").last().fadeIn(580);
+		}
 		
-
+		
 	}
 });
